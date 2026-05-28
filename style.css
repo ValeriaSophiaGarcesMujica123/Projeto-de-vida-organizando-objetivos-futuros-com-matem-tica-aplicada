@@ -1,70 +1,144 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap");
-
+/* Configurações Gerais */
 :root {
-  --cor-de-fundo: #1e1e1e;
-  --verde: #6fff57;
-  --branco: #ffffff;
-  --botao-ativo: #3a375e;
-  --botao-inativo: rgba(58, 55, 94, 0.5);
-  --texto-fundo: rgba(58, 55, 94, 0.3);
+    --primary-green: #2e7d32;
+    --light-green: #4caf50;
+    --dry-earth: #8d6e63;
+    --dark-text: #2c3e50;
+    --bg-card: #f9f9f9;
 }
 
 body {
-  background-color: var(--cor-de-fundo);
-  color: var(--branco);
-  font-family: "Chakra Petch", sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9 0%, #d7ccc8 100%);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.conteudo-principal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+.container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-top: 10px solid var(--primary-green);
+    position: relative;
+    overflow: hidden;
 }
 
-.titulo-principal {
-  text-align: left;
-  width: 100%;
-  font-size: 32px;
+/* Tipografia */
+h1 {
+    color: var(--primary-green);
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
-.titulo-principal span {
-  color: var(--verde);
+h2 {
+    color: var(--primary-green);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-.botao {
-  font-family: "Crakra Petch", sans-serif;
-  background-color: var(--botao-inativo);
-  color: var(--branco);
-  display: flex;
-  justify-content: center;
-  padding: 1em;
-  font-size: 18px;
-  align-items: center;
-  width: 100%;
-  border-bottom: 4px solid var(--botao-ativo);
-  border-left: 2px solid var(--botao-ativo);
-  border-right: 2px solid var(--botao-ativo);
-  border-top: none;
+.subtitle {
+    color: var(--dry-earth);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.botao:first-child {
-  border-radius: 40px 40px 0 0;
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #555;
+    margin-bottom: 35px;
 }
 
-.botoes {
-  display: block;
+.divider {
+    height: 3px;
+    background-color: var(--dry-earth);
+    width: 60px;
+    margin: 0 auto 25px auto;
+    border-radius: 2px;
 }
 
-@media screen and (min-width: 768px) {
-    .botao:first-child {
-      border-radius: 40px 0 0 0;
-    }
-  }
-  .ativo {
-    background-color: var(--botao-ativo);
-    border-bottom: 4px solid var(--verde);
-  }
+/* Cards de Detalhes */
+.card {
+    background-color: var(--bg-card);
+    border-left: 5px solid var(--dry-earth);
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--dry-earth);
+    font-size: 1.2rem;
+}
+
+.card p {
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* Botões */
+.btn {
+    display: block;
+    width: 220px;
+    margin: 20px auto 0 auto;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--light-green);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+    background-color: #7f8c8d;
+    width: 150px;
+}
+
+.btn-secondary:hover {
+    background-color: #95a5a6;
+}
+
+/* Lógica de Transição (Esconder/Mostrar) */
+.page-content {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hide {
+    display: none;
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
