@@ -1,29 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meus objetivos do ano</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de Áreas Degradadas</title>
+    <style>
+        :root {
+            --primary-green: #2e7d32;
+            --light-green: #4caf50;
+            --dry-earth: #8d6e63;
+            --bg-color: #fafafa;
+            --text-color: #333;
+        }
 
-  <body>
-    <section class="conteudo-principal">
-      <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
-      <div class="botoes">
-        <button class="botao">Cursos na Alura</button>
-        <button class="botao">Criar projetos em Javascript</button>
-        <button class="botao">Criar um portfolio</button>
-        <button class="botao">Atualizar meu currículo</button>
-      </div>
-    </section>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-<script src="main.js"></script>
-  </body>
+        .container {
+            max-width: 800px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-top: 8px solid var(--primary-green);
+            margin: 20px;
+        }
 
+        h1 {
+            color: var(--primary-green);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--dry-earth);
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .btn-enter {
+            display: inline-block;
+            background-color: var(--primary-green);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-enter:hover {
+            background-color: var(--light-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Recuperação de Áreas Degradadas</h1>
+        <div class="subtitle">Para uma Nova Produção Agrícola</div>
+        
+        <p class="intro-text">
+            A degradação do solo tem se tornado um dos grandes desafios para o ambiente e para a agricultura no Brasil. 
+            Fatores como a mineração, queimadas e a contaminação química reduzem a capacidade da terra de absorver água, 
+            gerando secas extremas e impactando diretamente a produção de alimentos e a vida animal. 
+            Descubra como transformar solos desidratados de volta em terras férteis e produtivas.
+        </p>
+
+        <a href="detalhes.html" class="btn-enter">Ver Detalhes do Projeto</a>
+    </div>
+
+</body>
 </html>
-
-    <button class="botao ativo">Cursos na Alura</button>
-<button class="botao">Criar projetos em Javascript</button>
-<button class="botao">Criar um portfolio</button>
-<button class="botao">Atualizar meu currículo</button>
