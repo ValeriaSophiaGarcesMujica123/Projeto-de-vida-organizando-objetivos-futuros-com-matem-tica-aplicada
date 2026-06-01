@@ -1,45 +1,52 @@
-// Selecionando os elementos da página pelos IDs
 // Aguarda o DOM estar totalmente carregado
 document.addEventListener('DOMContentLoaded', function() {
-    // Elementos da tela
+    // Pegando os elementos
     const telaInicial = document.getElementById('telaInicial');
     const conteudoPrincipal = document.getElementById('conteudoPrincipal');
     const btnEntrar = document.getElementById('btnEntrar');
     const btnVoltar = document.getElementById('btnVoltar');
 
+    // Verificando se os elementos existem
+    console.log('Tela inicial:', telaInicial);
+    console.log('Botão entrar:', btnEntrar);
+
     // Função para mostrar o conteúdo principal e esconder a tela inicial
     function mostrarConteudo() {
+        console.log('Botão entrar clicado!');
         telaInicial.style.display = 'none';
-        conteudoPrincipal.classList.remove('hidden');
-        // Rola suavemente para o topo do conteúdo
+        conteudoPrincipal.style.display = 'block';
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // Função para voltar para a tela inicial
     function voltarTelaInicial() {
-        conteudoPrincipal.classList.add('hidden');
+        console.log('Botão voltar clicado!');
         telaInicial.style.display = 'flex';
-        // Rola suavemente para o topo
+        conteudoPrincipal.style.display = 'none';
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Verifica se os elementos existem antes de adicionar eventos
+    // Adicionando os eventos
     if (btnEntrar) {
         btnEntrar.addEventListener('click', mostrarConteudo);
+        console.log('Evento adicionado ao botão entrar');
+    } else {
+        console.error('Botão entrar não encontrado!');
     }
 
     if (btnVoltar) {
         btnVoltar.addEventListener('click', voltarTelaInicial);
+        console.log('Evento adicionado ao botão voltar');
+    } else {
+        console.error('Botão voltar não encontrado!');
     }
 
-    // Pré-carregar a tela inicial visível
+    // Garantindo que a tela inicial está visível no início
     telaInicial.style.display = 'flex';
-    
-    // Adiciona um pequeno efeito visual - opcional
-    console.log('Site de Recuperação de Áreas Degradadas carregado com sucesso!');
+    conteudoPrincipal.style.display = 'none';
 });
 
-// Função utilitária para facilitar a adição de novas imagens (você pode chamar no console se quiser)
+// Função utilitária para adicionar imagens dinamicamente
 window.adicionarImagem = function(url, legenda) {
     const grid = document.getElementById('gridImagens');
     if (grid) {
@@ -50,8 +57,10 @@ window.adicionarImagem = function(url, legenda) {
             <span class="img-label">${legenda}</span>
         `;
         grid.appendChild(novoItem);
-        console.log(`Imagem adicionada: ${legenda}`);
+        console.log(`✅ Imagem adicionada: ${legenda}`);
+        return true;
     } else {
-        console.error('Grid de imagens não encontrado');
+        console.error('❌ Grid de imagens não encontrado');
+        return false;
     }
 };
