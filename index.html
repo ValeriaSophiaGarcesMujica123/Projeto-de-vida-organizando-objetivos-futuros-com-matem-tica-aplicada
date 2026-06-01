@@ -3,22 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concurso Agrinho - Apresentação</title>
+    <title>Recuperação de Áreas Degradadas | Nova Produção Agrícola</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
-        <h1>Recuperação de Áreas Degradadas</h1>
-        <div class="subtitle">Para uma Nova Produção Agrícola</div>
-        
-        <p class="intro-text">
-            A degradação do solo afeta drasticamente o ecossistema e a agricultura no Brasil. 
-            Quando o solo perde sua capacidade de absorver água, enfrentamos secas extremas que impactam a produção de alimentos e a vida dos animais.
-        </p>
+        <!-- Tela Inicial com Botão de Entrada -->
+        <div id="telaInicial" class="tela-inicial">
+            <div class="card-entrada">
+                <h1>Recuperação de Áreas Degradadas</h1>
+                <h2>PARA UMA NOVA PRODUÇÃO AGRÍCOLA</h2>
+                <p>A degradação do solo afeta drasticamente o ecossistema e a agricultura no Brasil. Quando o solo perde sua capacidade de absorver água, enfrentamos secas extremas que impactam a produção de alimentos e a vida dos animais.</p>
+                <button id="btnEntrar" class="btn-entrar">🌱 Entrar e Ver Detalhes</button>
+            </div>
+        </div>
 
-        <a href="detalhes.html" class="btn">Entrar e Ver Detalhes</a>
+        <!-- Conteúdo Principal (inicialmente escondido) -->
+        <div id="conteudoPrincipal" class="conteudo-principal hidden">
+            <header>
+                <h1>🌿 Recuperação de áreas degradadas para nova produção agrícola</h1>
+                <p class="subtitulo">Soluções sustentáveis para restaurar o solo e garantir o futuro da agricultura</p>
+            </header>
+
+            <section class="intro">
+                <h2>📌 Introdução</h2>
+                <p>Áreas degradadas sofrem com a perda de umidade, seca e redução da fertilidade no solo. Isso acontece principalmente por <strong>pastoreio excessivo, mineração, queimadas e contaminação por produtos químicos</strong>. A recuperação dessas áreas é essencial para garantir a segurança alimentar e o equilíbrio ambiental.</p>
+            </section>
+
+            <section class="causas">
+                <h2>⚠️ Principais causas da degradação</h2>
+                <div class="causas-grid">
+                    <div class="causa-item">🐄 Pastoreio excessivo</div>
+                    <div class="causa-item">⛏️ Mineração</div>
+                    <div class="causa-item">🔥 Queimadas</div>
+                    <div class="causa-item">🧪 Contaminação química</div>
+                </div>
+            </section>
+
+            <section class="solucoes">
+                <h2>🌱 Técnicas de recuperação</h2>
+                <ul>
+                    <li><strong>Revegetação:</strong> Plantio de espécies nativas para recompor a cobertura vegetal.</li>
+                    <li><strong>Bioengenharia de solos:</strong> Uso de matéria orgânica e microrganismos benéficos.</li>
+                    <li><strong>Controle de erosão:</strong> Terraceamento e curvas de nível.</li>
+                    <li><strong>Manejo sustentável:</strong> Rotação de culturas e integração lavoura-pecuária-floresta.</li>
+                </ul>
+            </section>
+
+            <!-- Espaço para imagens que você colocará depois -->
+            <section class="galeria">
+                <h2>🖼️ Galeria de imagens</h2>
+                <p class="aviso-imagens">(Espaço reservado para suas imagens - substitua os placeholders abaixo)</p>
+                <div class="grid-imagens" id="gridImagens">
+                    <!-- Placeholders de exemplo - você pode substituir as imagens -->
+                    <div class="img-placeholder">
+                        <img src="https://placehold.co/400x250/2d6a4f/white?text=Solo+Degradado" alt="Solo degradado">
+                        <span class="img-label">Solo degradado antes da recuperação</span>
+                    </div>
+                    <div class="img-placeholder">
+                        <img src="https://placehold.co/400x250/40916c/white?text=Planto+de+Cobertura" alt="Plantio de cobertura">
+                        <span class="img-label">Técnicas de plantio sustentável</span>
+                    </div>
+                    <div class="img-placeholder">
+                        <img src="https://placehold.co/400x250/52b788/white?text=Área+Recuperada" alt="Área recuperada">
+                        <span class="img-label">Área recuperada pronta para nova produção</span>
+                    </div>
+                    <div class="img-placeholder">
+                        <img src="https://placehold.co/400x250/74c69d/white?text=Agricultura+Sustentável" alt="Agricultura sustentável">
+                        <span class="img-label">Agricultura sustentável em ação</span>
+                    </div>
+                </div>
+                <!-- Instrução para adicionar suas imagens -->
+                <div class="instrucao-img">
+                    <p>📸 <strong>Como adicionar suas imagens:</strong> Substitua o <code>src</code> dos placeholders pelo caminho das suas imagens ou edite o conteúdo da <code>div grid-imagens</code> no HTML.</p>
+                </div>
+            </section>
+
+            <footer>
+                <p>🌍 Recuperar o solo é investir no futuro da agricultura e do planeta.</p>
+                <button id="btnVoltar" class="btn-voltar">← Voltar para tela inicial</button>
+            </footer>
+        </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
