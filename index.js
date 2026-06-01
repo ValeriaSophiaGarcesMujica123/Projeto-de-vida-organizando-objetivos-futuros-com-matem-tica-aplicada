@@ -1,31 +1,23 @@
-// Aguarda o DOM carregar completamente
+// Script para funcionalidades adicionais (se necessário)
 document.addEventListener('DOMContentLoaded', function() {
-    // Elementos
-    const telaInicial = document.getElementById('telaInicial');
-    const conteudoPrincipal = document.getElementById('conteudoPrincipal');
-    const btnEntrar = document.getElementById('btnEntrar');
-    const btnVoltar = document.getElementById('btnVoltar');
-
-    // Função para mostrar conteúdo
-    function mostrarConteudo() {
-        telaInicial.style.display = 'none';
-        conteudoPrincipal.style.display = 'block';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Função para voltar
-    function voltarConteudo() {
-        telaInicial.style.display = 'flex';
-        conteudoPrincipal.style.display = 'none';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Adiciona eventos
-    if (btnEntrar) {
-        btnEntrar.addEventListener('click', mostrarConteudo);
-    }
-
-    if (btnVoltar) {
-        btnVoltar.addEventListener('click', voltarConteudo);
-    }
+    console.log('Site de Recuperação de Áreas Degradadas carregado!');
+    
+    // Função para adicionar imagens dinamicamente (opcional)
+    window.adicionarImagem = function(url, legenda) {
+        const grid = document.getElementById('gridImagens');
+        if (grid) {
+            const novoItem = document.createElement('div');
+            novoItem.className = 'img-placeholder';
+            novoItem.innerHTML = `
+                <img src="${url}" alt="${legenda}">
+                <span class="img-label">${legenda}</span>
+            `;
+            grid.appendChild(novoItem);
+            console.log(`✅ Imagem adicionada: ${legenda}`);
+            return true;
+        } else {
+            console.error('❌ Grid de imagens não encontrado');
+            return false;
+        }
+    };
 });
